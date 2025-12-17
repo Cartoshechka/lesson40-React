@@ -10,15 +10,23 @@ const ControlledForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h2>Controlled Form</h2>
-            <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" />
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your password" />
-            <button type="submit">Submit</button>
+        <div className="form-container">
+            <form onSubmit={handleSubmit}>
+                <h2>Controlled Form</h2>
+                <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" />
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your password" />
+                <button type="submit">Submit</button>
 
-            <div>Email: {email}</div>
-            <div>Password: {password}</div>
-        </form>
+                <div>Email: {email}</div>
+                <div>Password: {password}</div>
+            </form>
+
+            <div className="data-display">
+                <h3>Current Values:</h3>
+                <div>Email: {email}</div>
+                <div>Password: {password}</div>
+            </div>
+        </div>
     );
 };
 

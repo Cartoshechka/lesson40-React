@@ -18,7 +18,7 @@ const UnControlledForm = () => {
     };
 
     return (
-        <>
+        <div className="form-container">
             <h2>Uncontrolled Form</h2>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="name" ref={nameRef} placeholder="Enter your name" />
@@ -26,7 +26,7 @@ const UnControlledForm = () => {
                 <button type="submit">Submit</button>
             </form>
 
-        </>
+        </div>
     );
 };
 

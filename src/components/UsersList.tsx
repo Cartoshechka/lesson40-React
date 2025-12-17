@@ -41,22 +41,22 @@ const UsersList = () => {
 
     // 5. Отображение по состоянию
     if (loading) {
-        return <div>Loading users...</div>;
+        return <div className="loading">Loading users...</div>;
     }
 
     if (error) {
-        return <div>Error: {error}</div>;
+        return <div className="error">Error: {error}</div>;
     }
 
     return (
-        <div>
+        <div className="users-list">
             <h2>Users List</h2>
             <ul>
                 {users.map(user => (
                     <li key={user.id}>
                         <strong>{user.name}</strong> (@{user.username})
                         <br />
-                        Email: {user.email}
+                        <span className="email">Email: {user.email}</span>
                     </li>
                 ))}
             </ul>
