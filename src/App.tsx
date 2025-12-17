@@ -1,6 +1,6 @@
 import ControlledForm from './components/ControlledForm';
 import UnControlledForm from './components/UnControlledForm';
-import UserList from './components/UsersList';
+import UsersList from './components/UsersList';
 
 const App = () => {
   return <div style={{ padding: '20px' }}>
@@ -14,7 +14,7 @@ const App = () => {
 
 
     <hr />
-    <UserList />
+    <UsersList />
   </div>
 }
 
